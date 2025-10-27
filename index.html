@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Бегіс әулетінің шежіресі</title>
+<style>
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.branch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  position: relative;
+}
+
+.branch::before {
+  content: "→";
+  color: #3498db;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.person {
+  background: #e8f1ff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.person:hover {
+  background: #d0e6ff;
+}
+
+.children {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  border-left: 2px solid #3498db;
+  padding-left: 15px;
+}
+
+/* Адаптация под телефон */
+@media (max-width: 768px) {
+  .tree {
+    margin-left: 10px;
+  }
+  .branch::before {
+    content: "";
+  }
+  .children {
+    border-left: none;
+    border-top: 2px solid #3498db;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Бегіс әулетінің шежіресі</h1>
+
+<div class="tree">
+
+  <div class="person" onclick="toggleChildren('begis')">Бегіс</div>
+  <div class="children" id="begis">
+    <div class="branch">
+      <div class="person" onclick="toggleChildren('pyshtanay')">Шабанқара</div>
+    </div>
+    <div class="children" id="pyshtanay">
+      <div class="branch">
+        <div class="person" onclick="toggleChildren('tugelek')">Түгелек</div>
+      </div>
+      <div class="children" id="tugelek">
+        <div class="branch">
+          <div class="person" onclick="toggleChildren('sabden')">Сәбден</div>
+        </div>
+        <div class="children" id="sabden">
+          <div class="branch">
+            <div class="person" onclick="toggleChildren('otemis')">Өтеміс</div>
+          </div>
+          <div class="children" id="otemis">
+            <div class="branch">
+              <div class="person" onclick="toggleChildren('tolenbai')">Төленбай</div>
+            </div>
+            <div class="children" id="tolenbai">
+              <div class="branch">
+                <div class="person" onclick="toggleChildren('almaganbet')">Әлмағанбет</div>
+              </div>
+              <div class="children" id="almaganbet">
+                <div class="branch">
+                  <div class="person" onclick="toggleChildren('mukash')">Мұқаш</div>
+                </div>
+                <div class="children" id="mukash">
+
+                  <div class="branch">
+                    <div class="person" onclick="toggleChildren('asan')">Асан</div>
+                  </div>
+                  <div class="children" id="asan">
+
+                    <div class="branch">
+                      <div class="person" onclick="toggleChildren('abishkali')">Әбішқали</div>
+                    </div>
+                    <div class="children" id="abishkali">
+
+                      <div class="branch">
+                        <div class="person" onclick="toggleChildren('kumar')">Құмар</div>
+                      </div>
+                      <div class="children" id="kumar">
+                        <div class="branch">
+                          <div class="person" onclick="toggleChildren('tuleukabyl')">Тлеукабыл</div>
+                        </div>
+                        <div class="children" id="tuleukabyl">
+                          <div class="person">Бақытжан</div>
+                          <div class="person">Бауыржан</div>
+                        </div>
+
+                        <div class="branch">
+                          <div class="person" onclick="toggleChildren('oryngali')">Орынбасар</div>
+                        </div>
+<div class="children" id="oryngali">
+                          <div class="person">Ерлан</div>
+                        </div>
+                      </div>
+
+                      <div class="branch">
+                        <div class="person" onclick="toggleChildren('basar')">Орынбасар</div>
+                      </div>
+                      <div class="children" id="basar">
+  <div class="branch">
+    <div class="person" onclick="toggleChildren('amangeldi')">Амангелді</div>
+  </div>
+  <div class="children" id="amangeldi">
+    <div class="person">Әділжан</div>
+    <div class="person">Әміржан</div>
+  </div>
+
+  <div class="person">Азамат</div>
+</div>
+
+
+                      <div class="person">Ермек</div>
+                    </div>
+
+                    <div class="person">Ермекқали</div>
+                  </div>
+
+                  <div class="branch">
+                    <div class="person" onclick="toggleChildren('usen')">Үсен</div>
+                  </div>
+                  <div class="children" id="usen">
+
+                    <div class="branch">
+                      <div class="person" onclick="toggleChildren('zhaiykbai')">Жайықбай</div>
+                    </div>
+                    <div class="children" id="zhaiykbai">
+                      <div class="person">Мұхтар</div>
+                      <div class="person">Қыдырбай</div>
+                      <div class="person">Темірғали</div>
+                    </div>
+
+                   <div class="branch">
+  <div class="person" onclick="toggleChildren('zhienbai')">Жиенбай</div>
+</div>
+<div class="children" id="zhienbai">
+  <div class="branch">
+    <div class="person" onclick="toggleChildren('ghumar')">Ғұмар</div>
+  </div>
+  <div class="children" id="ghumar">
+    <div class="person">Тұрлан</div>
+  </div>
+</div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleChildren(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
