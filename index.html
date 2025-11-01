@@ -151,19 +151,27 @@ h1 {
                         </div>
                       </div>
 
-                      <div class="branch">
-                        <div class="person" onclick="toggleChildren('basar')">Орынбасар</div>
-                      </div>
-                      <div class="children" id="basar">
+                   <div class="branch">
+  <div class="person" onclick="toggleChildren('basar')">Орынбасар</div>
+</div>
+
+<div class="children" id="basar">
   <div class="branch">
-    <div class="person" onclick="toggleChildren('amangeldi')">Амангелді</div>
-  </div>
-  <div class="children" id="amangeldi">
-    <div class="person">Әділжан</div>
-    <div class="person">Әміржан</div>
+    <div class="person" onclick="toggleChildren('maksot')">Мақсот</div>
   </div>
 
-  <div class="person">Азамат</div>
+  <div class="children" id="maksot">
+    <div class="branch">
+      <div class="person" onclick="toggleChildren('amangeldi')">Аян</div>
+    </div>
+
+    <div class="children" id="amangeldi">
+      <div class="person">Әділжан</div>
+      <div class="person">Әміржан</div>
+    </div>
+
+    <div class="person">Азамат</div>
+  </div>
 </div>
 
 
@@ -220,4 +228,5 @@ function toggleChildren(id) {
 </script>
 
 </body>
+
 </html>
